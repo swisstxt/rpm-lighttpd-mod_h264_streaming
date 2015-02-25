@@ -16,7 +16,7 @@ clean:
 	mkdir -p ./SPECS ./SOURCES
 
 get-source:
-	wget http://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-${VERSION}.tar.gz -O ./SOURCES/lighttpd-${VERSION}.tar.gz
+	wget http://download.lighttpd.net/lighttpd/releases-1.4.x/lighttpd-${VERSION}.tar.gz -P ./SOURCES/ -q
 
 build: clean get-source
 	cp -r ./SPECS/* ./rpmbuild/SPECS/ || true

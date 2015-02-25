@@ -35,7 +35,7 @@ Requires:       lighttpd
 H264 Streaming Module for Lighttpd
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 %patch0 -p0
 
 %build
