@@ -37,6 +37,22 @@ H264 Streaming Module for Lighttpd
 %prep
 %setup -q -n lighttpd-%{version}
 %patch0 -p0
+cp -p %SOURCE1 ./src/
+cp -p %SOURCE2 ./src/
+cp -p %SOURCE3 ./src/
+cp -p %SOURCE4 ./src/
+cp -p %SOURCE5 ./src/
+cp -p %SOURCE6 ./src/
+cp -p %SOURCE7 ./src/
+cp -p %SOURCE8 ./src/
+cp -p %SOURCE9 ./src/
+cp -p %SOURCE10 ./src/
+cp -p %SOURCE11 ./src/
+cp -p %SOURCE12 ./src/
+cp -p %SOURCE13 ./src/
+cp -p %SOURCE14 ./src/
+cp -p %SOURCE15 ./src/
+cp -p %SOURCE16 ./src/
 
 %build
 ./autogen.sh

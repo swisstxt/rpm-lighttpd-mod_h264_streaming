@@ -1,5 +1,5 @@
---- Makefile.am	2015-02-25 17:46:22.143019327 +0100
-+++ Makefile.am.new	2015-02-25 17:47:58.613021666 +0100
+--- src/Makefile.am	2015-02-25 17:46:22.143019327 +0100
++++ src/Makefile.am.new	2015-02-25 17:47:58.613021666 +0100
 @@ -265,6 +265,19 @@
  mod_accesslog_la_LDFLAGS = -module -export-dynamic -avoid-version
  mod_accesslog_la_LIBADD = $(common_libadd)
