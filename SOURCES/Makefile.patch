@@ -1,0 +1,22 @@
+--- Makefile.am	2015-02-25 17:46:22.143019327 +0100
++++ Makefile.am.new	2015-02-25 17:47:58.613021666 +0100
+@@ -265,6 +265,19 @@
+ mod_accesslog_la_LDFLAGS = -module -export-dynamic -avoid-version
+ mod_accesslog_la_LIBADD = $(common_libadd)
+ 
++lib_LTLIBRARIES += mod_h264_streaming.la
++mod_h264_streaming_la_SOURCES = mod_h264_streaming.c \
++                                mod_streaming_export.h \
++                                moov.c moov.h \
++                                mp4_io.c mp4_io.h \
++                                mp4_reader.c mp4_reader.h \
++                                mp4_writer.c mp4_writer.h \
++                                mp4_process.c mp4_process.h \
++                                output_bucket.c output_bucket.h \
++                                output_mp4.c output_mp4.h
++mod_h264_streaming_la_CFLAGS = $(AM_CFLAGS) -DBUILDING_H264_STREAMING
++mod_h264_streaming_la_LDFLAGS = -module -export-dynamic -avoid-version -no-undefined
++mod_h264_streaming_la_LIBADD = $(common_libadd)
+ 
+ hdr = server.h buffer.h network.h log.h keyvalue.h \
+       response.h request.h fastcgi.h chunk.h \
