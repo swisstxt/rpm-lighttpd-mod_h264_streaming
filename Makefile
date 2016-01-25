@@ -1,5 +1,5 @@
 HOME=$(shell pwd)
-VERSION="1.4.35"
+VERSION="1.4.39"
 NAME=lighttpd-mod_h264_streaming
 RELEASE=$(shell /opt/buildhelper/buildhelper getgitrev .)
 SPEC=$(shell /opt/buildhelper/buildhelper getspec ${NAME})
@@ -32,5 +32,5 @@ build: clean get-source
 	--define "_rpmdir %{_topdir}" \
 	--define "_srcrpmdir %{_topdir}" \
 
-publish: 
+publish:
 	/opt/buildhelper/buildhelper pushrpm yum-01.stxt.media.int:8080/swisstxt-centos

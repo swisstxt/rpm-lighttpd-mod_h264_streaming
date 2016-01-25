@@ -1,6 +1,8 @@
---- src/Makefile.am	2015-02-25 17:46:22.143019327 +0100
-+++ src/Makefile.am.new	2015-02-25 17:47:58.613021666 +0100
-@@ -265,6 +265,19 @@
+diff --git src/Makefile.am src/Makefile.am
+index 906823e..8395d16 100644
+--- src/Makefile.am
++++ src/Makefile.am
+@@ -267,6 +267,20 @@ mod_accesslog_la_SOURCES = mod_accesslog.c
  mod_accesslog_la_LDFLAGS = -module -export-dynamic -avoid-version
  mod_accesslog_la_LIBADD = $(common_libadd)
  
@@ -17,6 +19,7 @@
 +mod_h264_streaming_la_CFLAGS = $(AM_CFLAGS) -DBUILDING_H264_STREAMING
 +mod_h264_streaming_la_LDFLAGS = -module -export-dynamic -avoid-version -no-undefined
 +mod_h264_streaming_la_LIBADD = $(common_libadd)
++
  
- hdr = server.h buffer.h network.h log.h keyvalue.h \
-       response.h request.h fastcgi.h chunk.h \
+ hdr = server.h base64.h buffer.h network.h log.h keyvalue.h \
+ 	response.h request.h fastcgi.h chunk.h \
