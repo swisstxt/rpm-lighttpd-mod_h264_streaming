@@ -191,7 +191,7 @@ SETDEFAULTS_FUNC(mod_h264_streaming_set_defaults) {
 
     p->config_storage[i] = s;
 
-    if (0 != config_insert_values_global(srv, ((data_config *)srv->config_context->data[i])->value, cv)) {
+    if (0 != config_insert_values_global(srv, ((data_config *)srv->config_context->data[i])->value, cv, i == 0 ? T_CONFIG_SCOPE_SERVER : T_CONFIG_SCOPE_CONNECTION)) {
       return HANDLER_ERROR;
     }
   }
