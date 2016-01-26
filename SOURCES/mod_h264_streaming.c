@@ -346,7 +346,7 @@ URIHANDLER_FUNC(mod_h264_streaming_path_handler) {
       // ETag header
       {
         buffer *etag = buffer_init_buffer(sce->etag);
-        buffer_append_off_t(etag, content_length);
+        buffer_append_int(etag, content_length);
         etag_mutate(con->physical.etag, etag);
         response_header_overwrite(srv, con, CONST_STR_LEN("ETag"),
                                   CONST_BUF_LEN(con->physical.etag));
