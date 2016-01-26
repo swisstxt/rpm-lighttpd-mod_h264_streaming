@@ -324,8 +324,9 @@ URIHANDLER_FUNC(mod_h264_streaming_path_handler) {
               {
               case BUCKET_TYPE_MEMORY:
               {
-                buffer* b = chunkqueue_get_append_buffer(con->write_queue);
-                buffer_append_memory(b, bucket->buf_, bucket->size_);
+                //buffer* b = chunkqueue_get_append_buffer(con->write_queue);
+                //buffer_append_memory(b, bucket->buf_, bucket->size_);
+                chunkqueue_append_buffer(con->write_queue, bucket->buf_);
                 b->used++; /* add virtual \0 */
               }
                 break;
